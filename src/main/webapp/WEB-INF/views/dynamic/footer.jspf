@@ -1,0 +1,30 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+
+<div class="social-links-warp">
+    <div class="container">
+        <div class="social-links">
+            <div class="row">
+                <a href="https://www.linkedin.com/in/krystian--kazmierczak/" target="_blank"><i
+                        class="fa fa-linkedin"></i><span>linkedin</span></a>
+                <a href="#"><i class="fa fa-github"></i><span>github</span></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                    <i class="fa fa-youtube"></i><span>youtube</span></a>
+                <a href="mailto:krystian.kazmierczak91@gmail.com" target="_blank">
+                    <i class="fa fa-envelope"></i><span>e-mail</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="footer-widget">
+                    <div class="about-widget">
+                        <p>2022 | Krystian Kaźmierczak | <i class="fa fa-phone"></i> +48 534 752 881</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

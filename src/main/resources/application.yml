@@ -35,7 +35,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     user: kkgames
-    password: kkgames
+    password: kkgames123
     url: jdbc:mysql://mysqldb:3306/kkgames?useSSL=false&serverTimezone=CET&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     schemas: kkgames

@@ -16,7 +16,7 @@ values (1, 'News 1 Title', 'News 1 description', '12:10:02', '2022-01-01', 'admi
 
 INSERT INTO user(id, email, username, password, active, account_creation_time, account_creation_date, user_roles,
                  image_name)
-values (1, 'admin@admin.com', 'admin', '$10$PQB8Tfj9nBwXfGgUgz0HnujdO6W0mrSw6iNjR.hn.5otxA11dFZW2', true, '10:12:12', '2022-01-01', 'ADMIN', 'admin.jpg'),
+values (1, 'admin@admin.com', 'admin', '$2a$10$OT07oJXozePV/DjtjBUPxOkCpWcYs9UcCnQUbEzb.6k8TC568qp7i', true, '10:12:12', '2022-01-01', 'ADMIN', 'admin.jpg'),
        (2, 'user@user.com', 'user', '$2a$10$.xVn1nlHBVb0YKSkEmdMYOFQAAW1you99ElCrf4kZx35ghp9CT6CW', true, '10:12:12', '2022-01-01', 'USER', 'user.jpg'),
        (3, 'test@test.com', 'test', '$2a$10$dfA2xjjoQNeQI3vxKEw1KeMeaEmFlfhPUnsXRTLpxGQZyEQZFt6vG', false, '10:12:12', '2022-01-01', 'USER', 'testuser.jpg');
 

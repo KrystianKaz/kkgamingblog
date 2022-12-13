@@ -161,7 +161,7 @@
                                      alt="${commentsList.username}">
                                 <div class="lc-text">
                                     <h6>${commentsList.username}<span> w </span><a
-                                            href="/post/${commentsList.newsId}">${newsTitleById.printNewsPost(commentsList.newsId).getNewsTitle()}</a>
+                                            href="/post/${commentsList.newsId}">${newsTitleById.getNewsPostById(commentsList.newsId).getNewsTitle()}</a>
                                     </h6>
                                     <div class="lc-date">${commentsList.commentTime}, ${commentsList.commentDate}</div>
                                 </div>

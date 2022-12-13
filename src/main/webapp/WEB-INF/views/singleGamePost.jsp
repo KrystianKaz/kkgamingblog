@@ -45,6 +45,7 @@
             <div class="col-lg-8">
                 <div class="blog-post single-post">
                     <img src="/resources/assets/img/post/${gamePost.file}">
+                    <div class="line-post"></div>
                     <div class="post-date">${gamePost.reviewDate} | ${gamePost.reviewTime}</div>
                     <h3>${gamePost.gameTitle}</h3>
                     <div class="post-metas">
@@ -53,6 +54,11 @@
                         <div class="post-meta">${size} <i class="fa fa-comment"></i></div>
                     </div>
                     <p>${gamePost.description}</p>
+                    <p>Nasza ocena:</p>
+                    <div class="bar-holder">
+                        <div class="bar" style="width: ${gamePost.rating}%">${gamePost.rating}/100</div>
+                    </div>
+                    <div class="line"></div>
                     <div class="comments">
                         <h5>Komentarzy (${data.size()})</h5>
                         <ul class="comments-list">

@@ -54,6 +54,7 @@
             <div class="col-md-8">
                 <div class="blog-post single-post">
                     <img src="/resources/assets/img/post/${news.file}">
+                    <div class="line-post"></div>
                     <div class="post-date">${news.newsTime}, ${news.newsDate}</div>
                     <h3>${news.newsTitle}</h3>
                     <div class="post-metas">
@@ -62,6 +63,7 @@
                         <div class="post-meta">${size} <i class="fa fa-comment"></i></div>
                     </div>
                     <p>${news.description}</p>
+                    <div class="line"></div>
                     <div class="comments">
                         <h5>Komentarzy (${data.size()})</h5>
                         <ul class="comments-list">

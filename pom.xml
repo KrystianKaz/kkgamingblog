@@ -146,7 +146,7 @@
                 <configuration>
                     <appName>kkgamingblog</appName>
                     <processTypes>
-                        <web>java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar target/${project.build.finalName}.jar</web>
+                        <web>java -jar -Dserver.port=%PORT target/${project.build.finalName}.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>

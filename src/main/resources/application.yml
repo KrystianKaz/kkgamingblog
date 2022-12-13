@@ -4,7 +4,12 @@ spring:
     username: kkgames
     password: kkgames123
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+  flyway:
+    url: jdbc:mysql://localhost:3306/kkgames?useSSL=false&serverTimezone=CET
+    user: kkgames
+    password: kkgames123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    schemas: kkgames
   mvc:
     view:
       prefix: /WEB-INF/views/
@@ -28,6 +33,12 @@ spring:
     username: kkgames
     password: kkgames123
     driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    user: kkgames
+    password: kkgames
+    url: jdbc:mysql://mysqldb:3306/kkgames?useSSL=false&serverTimezone=CET&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    schemas: kkgames
   mvc:
     view:
       prefix: /WEB-INF/views/

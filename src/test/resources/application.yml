@@ -1,12 +1,17 @@
 spring:
+  profiles:
+    active: test
   datasource:
     url: jdbc:mysql://localhost:3306/kkgames?useSSL=false&serverTimezone=CET
     username: kkgames
     password: kkgames123
-  profiles:
-    active: test
+    driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     enabled: false
   jpa:
     hibernate:
       ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true

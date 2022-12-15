@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: test-jenkins
+  datasource:
+    url: jdbc:mysql://192.168.0.18:3307/kkgames?useSSL=false&serverTimezone=CET&allowPublicKeyRetrieval=true
+    username: kkgames
+    password: kkgames123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+

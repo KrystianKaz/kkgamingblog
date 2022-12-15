@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/kkgames?useSSL=false&serverTimezone=CET
+    username: kkgames
+    password: kkgames123
+  profiles:
+    active: test
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop

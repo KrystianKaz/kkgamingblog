@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "mvn clean compile -Dspring.profiles.active=test"
+                sh "mvn clean compile"
             }
         }
         stage('Test') {
             steps {
-                sh "mvn test -Dspring.profiles.active=test"
+                sh "mvn test -Dspring.profiles.active=test-jenkins"
             }
         }
         stage('Deploy') {

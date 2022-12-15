@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "mvn clean compile"
+                sh "mvn clean compile -Dspring.profiles.active=test"
             }
         }
         stage('Test') {

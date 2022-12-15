@@ -158,8 +158,18 @@
                 <configuration>
                     <appName>kkgamingblog</appName>
                     <processTypes>
-                        <web>java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar target/${project.build.finalName}.jar</web>
+                        <web>java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar
+                            target/${project.build.finalName}.jar
+                        </web>
                     </processTypes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>-Dspring.profiles.active=test-jenkins</argLine>
                 </configuration>
             </plugin>
         </plugins>

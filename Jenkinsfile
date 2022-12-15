@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "mvn test -Dspring.profiles.active=test-jenkins"
+                sh "mvn test -Dspring.profiles.active=test"
             }
         }
         stage('Deploy') {

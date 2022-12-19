@@ -1,8 +1,9 @@
 spring:
-  profiles:
-    active: test
+  config:
+    activate:
+      on-profile: test
   datasource:
-    url: jdbc:mysql://192.168.0.18:3307/kkgames?useSSL=false&serverTimezone=CET
+    url: jdbc:mysql://localhost:3306/kkgames?useSSL=false&serverTimezone=CET
     username: kkgames
     password: kkgames123
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -15,3 +16,27 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test-jenkins
+  datasource:
+    url: jdbc:mysql://localhost:3306/kkgames?useSSL=false&serverTimezone=CET&allowPublicKeyRetrieval=true
+    username: kkgames
+    password: kkgames123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+

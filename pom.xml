@@ -159,7 +159,7 @@
                     <appName>kkgamingblog</appName>
                     <processTypes>
                         <web>java -jar
-                            target/GamingBlog-0.0.1-SNAPSHOT.war -Dserver.port=$PORT -Dspring.profiles.active=prod
+                            target/GamingBlog-0.0.1-SNAPSHOT.war -Dserver.port=$PORT -Dspring.profiles.active=test-jenkins
                         </web>
                     </processTypes>
                 </configuration>

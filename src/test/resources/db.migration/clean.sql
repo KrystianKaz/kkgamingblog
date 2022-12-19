@@ -1,1 +1,0 @@
-DROP TABLE IF EXISTS game, comment, news, user, flyway_schema_history;

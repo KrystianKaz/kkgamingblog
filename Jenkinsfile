@@ -13,12 +13,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "mvn test -Dspring.profiles.active=test-jenkins"
+                sh "mvn test"
             }
         }
         stage('Deploy') {
             steps {
-                sh "mvn clean heroku:deploy-war -Dspring.profiles.active=test-jenkins"
+                sh "mvn clean heroku:deploy-war"
             }
         }
     }

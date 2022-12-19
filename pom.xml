@@ -158,13 +158,15 @@
                 <configuration>
                     <appName>kkgamingblog</appName>
                     <processTypes>
-                        <web>java -jar
-                            target/GamingBlog-0.0.1-SNAPSHOT.war -Dserver.port=$PORT -Dspring.profiles.active=test-jenkins
+                        <web>java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/GamingBlog-0.0.1-SNAPSHOT.war
                         </web>
                     </processTypes>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

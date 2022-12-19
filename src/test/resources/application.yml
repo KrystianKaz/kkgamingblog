@@ -31,6 +31,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     enabled: false
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
   jpa:
     hibernate:
       ddl-auto: create-drop

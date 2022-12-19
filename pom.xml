@@ -159,7 +159,7 @@
                     <appName>kkgamingblog</appName>
                     <processTypes>
                         <web>java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar
-                            target/${project.build.finalName}.war
+                            target/GamingBlog-0.0.1-SNAPSHOT.war
                         </web>
                     </processTypes>
                 </configuration>

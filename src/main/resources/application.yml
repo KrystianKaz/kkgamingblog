@@ -5,7 +5,10 @@ spring:
     password: ${database.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
-    schemas: kkgames
+    schemas: ${database.username}
+    url: ${database.url}
+    user: ${database.username}
+    password: ${database.password}
   mvc:
     view:
       prefix: /WEB-INF/views/

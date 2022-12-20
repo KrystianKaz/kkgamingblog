@@ -5,7 +5,7 @@ spring:
     password: ${database.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
-    schemas: ${database.username}
+    schemas: ${database.schema}
     url: ${database.url}
     user: ${database.username}
     password: ${database.password}

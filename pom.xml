@@ -157,6 +157,9 @@
                 <version>3.0.6</version>
                 <configuration>
                     <appName>kkgamingblog</appName>
+                    <processTypes>
+                        <web>java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/GamingBlog-0.0.1-SNAPSHOT.war</web>
+                    </processTypes>
                 </configuration>
             </plugin>
             <plugin>
@@ -165,6 +168,26 @@
                 <configuration>
                     <argLine>-Dspring.profiles.active=test</argLine>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>copy</goal></goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.heroku</groupId>
+                                    <artifactId>webapp-runner</artifactId>
+                                    <version>9.0.69.0</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

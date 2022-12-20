@@ -151,17 +151,14 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>com.heroku.sdk</groupId>-->
-<!--                <artifactId>heroku-maven-plugin</artifactId>-->
-<!--                <version>3.0.6</version>-->
-<!--                <configuration>-->
-<!--                    <appName>kkgamingblog</appName>-->
-<!--                    <processTypes>-->
-<!--                        <web>java $JAVA_OPTS -jar target/dependency/webapp-runner.jar &#45;&#45;port $PORT &#45;&#45;session-store memcache target/GamingBlog-0.0.1-SNAPSHOT.war -Dspring.profiles.active=deploy</web>-->
-<!--                    </processTypes>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.6</version>
+                <configuration>
+                    <appName>kkgamingblog</appName>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

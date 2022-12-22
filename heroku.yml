@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
   run:
-    web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT --session-store memcache target/GamingBlog-0.0.1-SNAPSHOT.war -Dspring.profiles.active=deploy
+    web: ["java", "-jar", "GamingBlog-0.0.1-SNAPSHOT.war"]

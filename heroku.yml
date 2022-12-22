@@ -1,5 +1,6 @@
 build:
   docker:
-    web: Dockerfile
+    web:
+      dockerfile: Dockerfile
   run:
-    web: ["java", "-jar", "GamingBlog-0.0.1-SNAPSHOT.war"]
+    web:

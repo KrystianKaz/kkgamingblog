@@ -1,1 +1,0 @@
-web java $JAVA_OPTS -jar --port $PORT target/GamingBlog-0.0.1-SNAPSHOT.war

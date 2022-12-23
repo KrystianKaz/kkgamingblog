@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "mvn package heroku deploy:war -Dheroku.appName=kkgamingblog"
+                sh "mvn package heroku deploy-war -Dheroku.appName=kkgamingblog"
             }
         }
     }

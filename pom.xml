@@ -157,7 +157,7 @@
                 <version>2.2.0</version>
                 <configuration>
                     <deploy.projectId>kkgamingblog</deploy.projectId>
-                    <deploy.version>0.1</deploy.version>
+                    <deploy.version>first</deploy.version>
                 </configuration>
             </plugin>
 
@@ -168,7 +168,7 @@
                 <configuration>
                     <appName>kkgamingblog</appName>
                     <processTypes>
-                        <web> java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT ./target/GamingBlog-0.0.1-SNAPSHOT.war -Dspring.profiles.active=deploy</web>
+                        <web> java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/GamingBlog-0.0.1-SNAPSHOT.war -Dspring.profiles.active=deploy</web>
                     </processTypes>
                 </configuration>
             </plugin>

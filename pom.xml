@@ -50,6 +50,20 @@
             <artifactId>jstl</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!--        2 dependecies for heroku testings begin-->
+
+        <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <!--        2 dep ends-->
 
         <dependency>
             <groupId>mysql</groupId>

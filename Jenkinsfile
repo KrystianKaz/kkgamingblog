@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "heroku war:deploy target/GamingBlog-0.0.1-SNAPSHOT.war -Dheroku.appName=kkgamingblog"
+                sh "heroku war:deploy --war target/GamingBlog-0.0.1-SNAPSHOT.war -Dheroku.appName=kkgamingblog"
             }
         }
     }

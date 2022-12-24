@@ -13,12 +13,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "mvn test package"
+                sh "mvn test"
             }
         }
         stage('Deploy') {
             steps {
-                sh "mvn heroku:deploy-war target/*.war -Dheroku.appName=kkgamingblog"
+                sh "mvn package heroku:deploy-war -Dheroku.appName=kkgamingblog"
             }
         }
     }

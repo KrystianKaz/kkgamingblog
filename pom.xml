@@ -27,7 +27,6 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-            <version>9.0.65</version>
             <scope>provided</scope>
         </dependency>
 
@@ -49,35 +48,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.2</version>
-            <scope>provided</scope>
         </dependency>
-        <!--        3 dependecies for heroku testings begin-->
-        <dependency>
-            <groupId>javax.el</groupId>
-            <artifactId>el-api</artifactId>
-            <version>2.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
-            <version>1.2.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>taglibs</groupId>
-            <artifactId>standard</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>3.3.2</version>
-        </dependency>
-
-        <!--        3 dep ends-->
 
         <dependency>
             <groupId>mysql</groupId>
@@ -188,8 +159,7 @@
                 <configuration>
                     <appName>kkgamingblog</appName>
                     <processTypes>
-                        <web>java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/GamingBlog-0.0.1-SNAPSHOT.war
-                        </web>
+                        <web>java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/GamingBlog-0.0.1-SNAPSHOT.war</web>
                     </processTypes>
                 </configuration>
             </plugin>
@@ -202,21 +172,11 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
-                <configuration>
-                    <webappDirectory>src/main/</webappDirectory>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
                         <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
+                        <goals><goal>copy</goal></goals>
                         <configuration>
                             <artifactItems>
                                 <artifactItem>

@@ -4,6 +4,7 @@ import com.site.gamingblog.exception.*;
 import com.site.gamingblog.model.User;
 import com.site.gamingblog.model.enums.UserRolesEnum;
 import com.site.gamingblog.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ import java.util.Optional;
 public class UserService {
 
 
+    @Autowired
     private final UserRepository userRepository;
 
     public UserService(final UserRepository userRepository) {
@@ -33,7 +35,7 @@ public class UserService {
     }
 
     public void addUser(String email, String username, String password) {
-        if (!checkIfUserWithGivenNicknameIsInDatabase(username)) ;
+        if (!checkIfUserWithGivenNicknameIsInDatabase(username))
         {
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             User user = User.builder()

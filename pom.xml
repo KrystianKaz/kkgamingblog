@@ -8,12 +8,12 @@
         <version>2.7.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>GamingBlog</artifactId>
+    <groupId>com.site</groupId>
+    <artifactId>gamingblog</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>GamingBlog</name>
-    <description>GamingBlog</description>
+    <name>gamingblog</name>
+    <description>gamingblog</description>
     <properties>
         <java.version>17</java.version>
     </properties>

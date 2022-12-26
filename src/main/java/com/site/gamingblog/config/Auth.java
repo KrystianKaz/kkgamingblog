@@ -1,8 +1,6 @@
 package com.site.gamingblog.config;
 
-import com.site.gamingblog.model.User;
 import com.site.gamingblog.service.MyUserDetailsService;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,14 +16,18 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class Auth extends WebSecurityConfigurerAdapter {
 
-    private  final MyUserDetailsService userDetailsService;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final MyUserDetailsService myUserDetailsService;
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .userDetailsService(userDetailsService)
-                .passwordEncoder(bCryptPasswordEncoder);
+                .userDetailsService(myUserDetailsService)
+                .passwordEncoder(passwordEncoder());
     }
 
     @Override
@@ -51,4 +53,3 @@ public class Auth extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/");
     }
 }
-

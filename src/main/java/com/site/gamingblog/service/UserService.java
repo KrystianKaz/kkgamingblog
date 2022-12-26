@@ -4,7 +4,6 @@ import com.site.gamingblog.exception.*;
 import com.site.gamingblog.model.User;
 import com.site.gamingblog.model.enums.UserRolesEnum;
 import com.site.gamingblog.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +12,15 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
-@RequiredArgsConstructor
 @Service
 public class UserService {
 
+
     private final UserRepository userRepository;
 
+    public UserService(final UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public List<User> findAllUsers() {
         return userRepository.findAll();

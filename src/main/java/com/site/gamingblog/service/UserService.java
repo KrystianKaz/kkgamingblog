@@ -17,7 +17,6 @@ import java.util.Optional;
 public class UserService {
 
 
-    @Autowired
     private final UserRepository userRepository;
 
     public UserService(final UserRepository userRepository) {

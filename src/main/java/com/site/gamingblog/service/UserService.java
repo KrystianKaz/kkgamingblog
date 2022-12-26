@@ -4,7 +4,6 @@ import com.site.gamingblog.exception.*;
 import com.site.gamingblog.model.User;
 import com.site.gamingblog.model.enums.UserRolesEnum;
 import com.site.gamingblog.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -16,8 +15,7 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-
-    private final UserRepository userRepository;
+    public UserRepository userRepository;
 
     public UserService(final UserRepository userRepository) {
         this.userRepository = userRepository;

@@ -162,7 +162,9 @@
                 <configuration>
                     <appName>kkgamingblog</appName>
                     <processTypes>
-                        <web>java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/gamingblog-0.0.1-SNAPSHOT.war</web>
+                        <web>java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT
+                            target/gamingblog-0.0.1-SNAPSHOT.war
+                        </web>
                     </processTypes>
                     <warFile>target/gamingblog-0.0.1-SNAPSHOT.war</warFile>
                 </configuration>
@@ -181,7 +183,9 @@
                 <executions>
                     <execution>
                         <phase>package</phase>
-                        <goals><goal>copy</goal></goals>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
                         <configuration>
                             <artifactItems>
                                 <artifactItem>

@@ -161,11 +161,11 @@
                 <version>3.0.6</version>
                 <configuration>
                     <appName>kkgamingblog</appName>
-                    <processTypes>
-                        <web>java $JAVA_OPTS -jar target/dependency/webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT
-                            target/*.war
-                        </web>
-                    </processTypes>
+<!--                    <processTypes>-->
+<!--                        <web>java $JAVA_OPTS -jar target/dependency/webapp-runner.jar $WEBAPP_RUNNER_OPTS &#45;&#45;port $PORT-->
+<!--                            target/*.war-->
+<!--                        </web>-->
+<!--                    </processTypes>-->
                     <warFile>target/gamingblog-0.0.1-SNAPSHOT.war</warFile>
                 </configuration>
             </plugin>

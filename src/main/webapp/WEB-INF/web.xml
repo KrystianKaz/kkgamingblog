@@ -5,11 +5,15 @@
          version="4.0">
     <servlet>
         <servlet-name>index</servlet-name>
-        <jsp-file>/src/main/webapp/WEB-INF/views/index.jsp</jsp-file>
+        <jsp-file>/target/gamingblog-0.0.1-SNAPSHOT/WEB-INF/views/index.jsp</jsp-file>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <url-pattern></url-pattern>
     </servlet-mapping>
 </web-app>

@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
         <servlet-name>index</servlet-name>
-        <jsp-file>src/main/webapp/WEB-INF/views/index.jsp</jsp-file>
+        <jsp-file>/src/main/webapp/WEB-INF/views/index.jsp</jsp-file>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>

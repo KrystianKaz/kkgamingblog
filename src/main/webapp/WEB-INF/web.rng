@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="web-app">
+            <attribute name="version">
+                <data type="decimal"/>
+            </attribute>
+            <attribute name="xsi:schemaLocation"/>
+            <element name="servlet">
+                <ref name="servlet-name"/>
+                <element name="jsp-file">
+                    <text/>
+                </element>
+            </element>
+            <element name="servlet-mapping">
+                <ref name="servlet-name"/>
+                <element name="url-pattern">
+                    <text/>
+                </element>
+            </element>
+        </element>
+    </start>
+    <define name="servlet-name">
+        <element name="servlet-name">
+            <data type="NCName"/>
+        </element>
+    </define>
+</grammar>

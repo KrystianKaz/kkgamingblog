@@ -6,10 +6,17 @@
     <servlet>
         <servlet-name>index</servlet-name>
         <jsp-file>/target/gamingblog-0.0.1-SNAPSHOT/WEB-INF/views/index.jsp</jsp-file>
-        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>news</servlet-name>
+        <jsp-file>/target/gamingblog-0.0.1-SNAPSHOT/WEB-INF/views/news.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>news</servlet-name>
+        <url-pattern>/news</url-pattern>
     </servlet-mapping>
 </web-app>

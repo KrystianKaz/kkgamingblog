@@ -17,14 +17,12 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-server:
-  port: 8001
 ---
 
 spring:
   config:
     activate:
-      on-profile: prod
+      on-profile: dev
   datasource:
     url: jdbc:mysql://mysqldb:3306/kkgames?useSSL=false&serverTimezone=CET&allowPublicKeyRetrieval=true
     username: kkgames
@@ -32,14 +30,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     schemas: kkgames
-  mvc:
-    view:
-      prefix: /WEB-INF/views/
-      suffix: .jsp
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
@@ -48,25 +42,10 @@ spring:
 spring:
   config:
     activate:
-      on-profile: deploy
+      on-profile: prod
   datasource:
-    url: ${database.url}
-    username: ${database.username}
-    password: ${database.password}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   flyway:
-    schemas: ${database.schema}
-    url: ${database.url}
-    user: ${database.username}
-    password: ${database.password}
-  mvc:
-    view:
-      prefix: /WEB-INF/views/
-      suffix: .jsp
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+    schemas: ${DB_FLYWAY_SCHEMA}

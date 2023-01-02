@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS game, comment, news, user;
+DROP TABLE IF EXISTS comment, game, news, user;
 
 CREATE TABLE comment
 (

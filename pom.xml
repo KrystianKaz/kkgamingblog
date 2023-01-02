@@ -27,7 +27,7 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-            <version>9.0.63</version>
+            <version>9.0.65</version>
             <scope>provided</scope>
         </dependency>
 
@@ -156,48 +156,11 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.6</version>
-                <configuration>
-                    <appName>kkgamingblog</appName>
-<!--                    <processTypes>-->
-<!--                        <web>java $JAVA_OPTS -jar target/dependency/webapp-runner.jar $WEBAPP_RUNNER_OPTS &#45;&#45;port $PORT-->
-<!--                            target/*.war-->
-<!--                        </web>-->
-<!--                    </processTypes>-->
-                    <warFile>target/gamingblog-0.0.1-SNAPSHOT.war</warFile>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <argLine>-Dspring.profiles.active=test</argLine>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.4.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>com.heroku</groupId>
-                                    <artifactId>webapp-runner</artifactId>
-                                    <version>9.0.69.1</version>
-                                    <destFileName>webapp-runner.jar</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

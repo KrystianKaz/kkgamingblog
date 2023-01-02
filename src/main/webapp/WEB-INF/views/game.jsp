@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-    <title>TheQuest - Gaming Magazine Template</title>
+    <title>KKGames - News, Reviews, GAMES!</title>
     <meta charset="UTF-8">
-    <meta name="description" content="TheQuest Gaming Magazine Template">
+    <meta name="description" content="KKGames - News, Reviews, GAMES!">
     <meta name="keywords" content="gaming, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
